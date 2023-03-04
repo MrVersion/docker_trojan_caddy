@@ -4,7 +4,7 @@
     }
 }
 {$YOUR_DOMAIN_COM} {
-    reverse_proxy /ray http://0.0.0.0:10001
+    reverse_proxy /ray localhost:10001
     log {
         output file /usr/src/caddy.log
     }
