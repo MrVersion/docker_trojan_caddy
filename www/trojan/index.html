@@ -1,1 +1,621 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Tabs Example</title>
+	<!-- 引入 Bootstrap CSS -->
+	<link rel="stylesheet" href="./bootstrap.min.css">
+	<!-- 引入自定义样式 -->
+	<style type="text/css">
+		.tab-content {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a target="_blank" class="navbar-brand" href="#">个人导航页</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="#">主页</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="#">关于</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="#">服务</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="#">联系</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+	<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="nav flex-column nav-pills">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link active" data-bs-toggle="pill" href="#tab1">图片</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab2">设计</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab3">编程</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab4">工具</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab5">影视</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab6">文件分享</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab7">投资</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab8">源码</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab9">资讯</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab10">音源</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab11">书源</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab12">卡片笔记</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" data-bs-toggle="pill" href="#tab13">学术</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10">
+      <div class="tab-content">
+        <div id="tab1" class="tab-pane fade show active">
+          <h3>图片</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                <td><a target="_blank" href="http://pixabay.com/">Pixabay</a></td>
+                <td><a target="_blank" href="https://www.hippopx.com/zh">Hippopx</a></td>
+                <td><a target="_blank" href="https://www.benjamineverett.com/">Benjamin Everett 大师照片集</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="http://iconfont.cn/home/index?spm=a313x.7781069.1998910419.1.VuRkFV">阿里巴巴矢量图标库</a></td>
+                <td><a target="_blank" href="https://www.colorhub.me/">高清无版权图片</a></td>
+                <td>Row 2, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+              <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="tab2" class="tab-pane fade">
+          <h3>设计</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                <td><a target="_blank" href="https://origami.design/tutorials/">Origami Studio —原型设计</a></td>
+                <td><a target="_blank" href="https://www.gaoding.com/koutu">【抠图】在线抠图软件_ps抠图证件照换底色</a></td>
+                <td><a target="_blank" href="https://instantlogodesign.com/generate?name=beau">logo生成</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://www.draw.io/">Untitled Diagram.xml - draw.io流程图工具</a></td>
+                <td><a target="_blank" href="http://www.nomnoml.com/">nomnoml文字流程图</a></td>
+                <td><a target="_blank" href="https://cssgradient.io/">渐变CSS Gradient — Generator, Maker, and Background</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://carbon.now.sh/">代码美化工具Carbon | Create and share beautiful images of your source
+                code</a></td>
+                <td><a target="_blank" href="https://www.remove.bg/zh">消除图片中的背景 – remove.bg</a></td>
+                <td><a target="_blank" href="https://md.aclickall.com/">Md2All</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="http://www.114la.com/other/rgb.htm">RGB颜色查询对照表</a></td>
+                <td><a target="_blank" href="https://www.browserling.com/">Browserling 浏览器兼容测试</a></td>
+                <td><a target="_blank" href="http://www.wahart.com.hk/rgb.htm">RGB配色表</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="https://excalidraw.com/">excalidraw手绘流程图</a></td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="tab3" class="tab-pane fade">
+          <h3>编程</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                <td><a target="_blank" href="https://confucianzuoyuan.github.io/craftinginterpreters/contents.html">Interpreters 制作解释器</a></td>
+                <td><a target="_blank" href="http://cnborn.net/docs/getting_real/">Getting Real by 37signals</a></td>
+                <td><a target="_blank" href="https://aws.amazon.com/cn/lightsail/">Amazon Lightsail</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://my.freenom.com/clientarea.php?action=domains">Freenom申请新域名</a></td>
+                <td><a target="_blank" href="https://www.vpsrb.com/">VPS日报</a></td>
+                <td><a target="_blank" href="https://www.dns.la/manage/DomainSet.aspx?domain=good2net.ga">dns.la域名设置</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://www.sockscap64.com/">SocksCap64的Socks代理软件</a></td>
+                <td><a target="_blank" href="https://whoer.net/zh#">匿名程度查询</a></td>
+                <td><a target="_blank" href="https://mail.protonmail.com/u/0/inbox">加密邮箱ProtonMail </a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://mail.tutanota.com/mail/MmiDP2E-0k-2/MmiDP45--7-2">邮箱Tutanota</a></td>
+                <td><a target="_blank" href="https://10beasts.net/china-fanqiang-tools-blacklist/">中国软件黑名单</a></td>
+                <td><a target="_blank" href="https://ip.skk.moe/">查看我的 IP 地址</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://neverinstall.com/home">Neverinstall</a></td>
+				<td><a target="_blank" href="https://www.namesilo.com/account_domains.php">Domain Manager付费域名</a></td>
+				<td><a target="_blank" href="https://sms-activate.org/getNumber">短期手机号码</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://hyperbeam.com/app/">Hyperbeam - 在线浏览器</a></td>
+				<td><a target="_blank" href="https://www.kuangstudy.com/">首页-KuangStudy</a></td>
+                <td><a target="_blank" href="https://deerchao.net/tutorials/regex/regex.htm">正则表达式30分钟入门教程</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="http://marklodato.github.io/visual-git-guide/index-zh-cn.html">图解Git</a></td>
+        <td><a target="_blank" href="https://www.cs.usfca.edu/~galles/visualization/OpenHash.html">HashMap可视化查看</a></td>
+         <td><a target="_blank" href="http://demon.tw/my-work/editplus-regcode-online.html">EditPlus注册码在线生成 | Demon's Blog</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="http://ping.pe/">Ping and mtr from multiple locations</a></td>
+				<td><a target="_blank" href="http://www.webkaka.com/Ping.aspx#a19">网站全国各地Ping值测试|在线ping工具—卡卡网 www.webkaka.com</a></td>
+				<td><a target="_blank" href="http://www.fakemailgenerator.com/inbox/dayrep.com/jamesgduncan/">Fake Mail Generator临时邮件</a>
+            </td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://w3techs.com/sites">查看网站技术</a></td>
+				<td><a target="_blank" href="https://greasyfork.org/zh-CN">Greasy Fork浏览器脚本</a></td>     
+				<td><a target="_blank" href="https://regexr-cn.com/">RegExr: 学习、构建 和 测试 正则表达式 Test RegEx</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://www.json.cn/runcode/">在线编译运行</a></td>
+				<td></td>     
+				<td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="tab4" class="tab-pane fade">
+          <h3>工具</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                <td><a target="_blank" href="https://hizdm.cn/#m_detail">张大妈计算器</a></td>
+        <td><a target="_blank" href="https://www.ziyuangou.com/">资源狗</a></td>
+<td><a target="_blank" href="http://www.tbtool.cn/">图吧工具箱 - 最纯净的硬件工具箱</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="http://search.chongbuluo.com/">快搜</a></td>
+        <td><a target="_blank" href="http://guozhivip.com/">果汁导航</a></td>
+        <td><a target="_blank" href="https://duckduckgo.com/?t=hc&va=b">DuckDuckGo</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://www.lzpan.com/">懒盘搜索</a></td>
+        <td><a target="_blank" href="https://www.whatismyip.com/ip-address-lookup/">IP Address Lookup</a></td>
+        <td><a target="_blank" href="https://buyspotify.net/">BuySpotify.net</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="http://www.jisouke.com/">网络爬虫工具-GooSeeker网络爬虫</a></td>
+        <td><a target="_blank" href="https://www.qimai.cn/">专业移动产品商业分析平台-ASO-ASM优化</a></td>
+        <td><a target="_blank" href="https://s.threatbook.cn/">微步在线云沙箱</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://vis.pku.edu.cn/vis4china/#/">可视化看中国</a></td>
+        <td><a target="_blank" href="https://www.autopiano.cn/">自由钢琴</a></td>
+        <td><a target="_blank" href="http://www.sharerw.com/a/ziyuan/">盒子软件</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://www.mpyit.com/">老殁</a></td>
+        <td><a target="_blank" href="https://www.67tool.com/">67工具网-致力打造即用即走型在线工具箱</a></td>
+        <td><a target="_blank" href="https://nav.guidebook.top/">Guidebook | 让工作学习生活更高效！</a></td>
+              </tr>
+              <tr>
+                 <td><a target="_blank" href="https://www.lanrenexcel.com/">懒人Excel</a></td>
+        <td><a target="_blank" href="https://web.baimiaoapp.com/">图片转文字在线</a></td>
+        <td><a target="_blank" href="https://tools.pdf24.org/zh/">PDF24 Tools: 免费且易于使用的在线PDF工具</a></td>
+              </tr>
+              <tr>
+                <td>
+                <a target="_blank" href="http://datav.aliyun.com/tools/atlas/index.html#&lat=30.332329214580188&lng=106.72278672066881&zoom=3.5">地图选择器</a>
+            </td>
+        <td><a target="_blank" href="https://www.todesk.com/">ToDesk远程控制软件</a></td>
+        <td><a target="_blank" href="http://toolwa.com/github/">GitHub 加速下载 - 在线工具</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://qtox.github.io/zh_CN.html">qTox：新型即时聊天工具</a></td>
+		<td><a target="_blank" href="https://tox.chat/download.html">Download - Tox 端对端加密通信</a></td>
+		<td><a target="_blank" href="https://azure.microsoft.com/zh-cn/services/cognitive-services/text-to-speech/#features"> 真实 AI 语音生成器 | Microsoft Azure</a></td>
+              </tr>
+              <tr>
+                <td><a target="_blank" href="https://jex.im/regulex/#!flags=i&re=%5E(a%7Cb)*%3F%24">正则流程图</a></td>
+		<td><a target="_blank" href="https://www.toolfk.com/">ToolFK-程序员开发工具大全 在线小工具网站</a></td>
+		<td><a target="_blank" href="http://www.atoolbox.net/">一个工具箱 - 好用的在线工具都在这里！</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="http://www.6fcsj.com/">小黄条：能嵌入桌面的跨平台todolist、便签</a></td>
+		<td><a target="_blank" href="https://www.appinn.com/openwebmonitor/">OpenWebMonitor - 实时监控网页变化</a>
+            </td>
+        <td><a target="_blank" href="http://cron.qqe2.com/">在线Cron表达式生成器</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="https://tool.lu/">在线工具 - 你的工具箱</a></td>
+        <td><a target="_blank" href="https://tools.miku.ac/">MikuTools - 一个轻量的工具集合</a></td>
+        <td><a target="_blank" href="https://ocr.space/#Text">OCR 识别</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" 	href="http://www.wolframalpha.com/input/?i=12.42*(1-0.1)%5Ex%3D3">Wolfram|Alpha解方程</a></td>
+        <td><a target="_blank" href="https://regexper.com/#sd">Regexper正则可视</a></td>
+        <td><a target="_blank" href="https://push.ggt1024.com/">消息推送-微信</a></td>
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="tab5" class="tab-pane fade">
+          <h3>影视</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                 <td><a target="_blank" href="https://www.cupfox.app/">茶杯狐 Cupfox</a></td>
+        <td><a target="_blank" href="https://sobo.me/">搜播</a></td>
+        <td><a target="_blank" href="https://www.duboku.tv/">独播库</a></td>
+              </tr>
+              <tr>
+        <td><a target="_blank" href="https://www.pianku.tv/">片库 - 高清影视资源下载</a></td>
+        <td><a target="_blank" href="http://www.dijiaxia.com/">瓜皮TV</a></td>
+        <td><a target="_blank" href="https://cokemv.me/">COKEMV影视 在线1080P电影</a></td>
+              </tr>
+              <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+                <div id="tab6" class="tab-pane fade">
+          <h3>文件分享</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                <td><a target="_blank" href="http://alixiaozhan.com/">阿里小站-阿里云盘资源共享站</a></td>
+        <td><a target="_blank" href="https://www.alipanso.com/">阿里盘搜 - 阿里云盘资源搜索神器</a></td>
+        <td><a target="_blank" href="https://www.wenshushu.cn/">文叔叔 - 传文件</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="https://rustdesk.com/zh/">RustDesk | 最好的开源远程桌面软件</a></td>
+        <td><a target="_blank" href="https://anonfiles.com/">Anonymous File Upload - AnonFiles</a></td>
+        <td><a target="_blank" href="https://wormhole.app/">Wormhole - 简单、私密的文件共享</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="https://www.ppzhilian.com/">PP直连 - 所有设备直连互通</a></td>
+        <td><a target="_blank" href="https://www.niceso.fun/">奈斯搜索 - 资源超丰富的阿里云盘资源搜索</a></td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+                <div id="tab7" class="tab-pane fade">
+          <h3>投资</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                <td><a target="_blank" href="http://data.eastmoney.com/report/">研报首页</a></td>
+        <td><a target="_blank" href="https://www1.hkexnews.hk/search/titlesearch.xhtml?lang=zh">上市公司信息標題搜尋</a></td>
+        <td><a target="_blank" href="https://www.endata.com.cn/BoxOffice/index.html">艺恩-数据智能服务商</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="https://report.amap.com/diagnosis/index.do">中国主要城市交通健康榜</a></td>
+        <td><a target="_blank" href="https://robo.datayes.com/">萝卜投研-智能股票投研</a></td>
+        <td><a target="_blank" href="http://www.caam.org.cn/tjsj">数据统计</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="https://data.sh.gov.cn/index.html">上海市公共数据开放平台</a></td>
+        <td><a target="_blank" href="https://www.weibotop.cn/">热搜神器•微博热搜历史记录</a></td>
+        <td><a target="_blank" href="https://www.sec.gov/">美股招股书</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="https://www.vicsdf.com/">报告汇</a></td>
+        <td><a target="_blank" href="http://report.seedsufe.com/index">专业研报平台</a></td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="tab8" class="tab-pane fade">
+          <h3>源码</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                <td><a target="_blank" href="https://ghproxy.com/">GitHub Proxy 代理加速</a></td>
+        <td><a target="_blank" href="https://item.guidebook.top/github/">Github镜像网站 - 数字生活指南·工具集</a></td>
+        <td><a target="_blank" href="#">链接 6</a></td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="tab9" class="tab-pane fade">
+          <h3>资讯</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                 <td><a target="_blank" href="http://www.mydigi.net/">说明书下载- 说明书之家</a></td>
+        <td><a target="_blank" href="https://www.dbbqb.com/">逗比拯救世界--专业的表情包搜索网站</a></td>
+        <td><a target="_blank" href="http://chinadigitaltimes.net/chinese/author/fuck-gfw/">草墙推 - 中国数字时代</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="http://www.solidot.org/">Solidot: 奇客的资讯，重要的东西</a></td>
+        <td><a target="_blank" href="http://techcrunch.cn/">TechCrunch 中国 - 最新科技新闻和创业公司信息</a></td>
+        <td><a target="_blank" href="http://www.geekpark.net/">发现产品的价值 | 极客公园</a></td>
+              </tr>
+               <tr>
+                 <td><a target="_blank" href="http://www.woshipm.com/zhichang/3144587.html">数据信息收集的3个方法</a></td>
+        <td><a target="_blank" href="https://archive.org/">历史车轮</a></td>
+        <td><a target="_blank" href="https://www.v2ex.com/">V2EX技术社区</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="http://www.yinwang.org/">当然我在扯淡</a></td>
+        <td><a target="_blank" href="http://blog.samaltman.com/">Sam Altman</a></td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="tab10" class="tab-pane fade">
+          <h3>音源</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                <td><a target="_blank" href="https://www.tosound.com/">淘声网 - toSound声音搜索引擎</a></td>
+        <td><a target="_blank" href="http://1024me.carp.mopaasapp.com/">♪音乐解析♪</a></td>
+         <td><a target="_blank" href="https://cn.imslp.org/wiki/Main_Page">国际乐谱库：曲谱PDF下载</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="https://mixkit.co/free-stock-music/">免费音频网</a></td>
+        <td><a target="_blank" href="https://freemusicarchive.org/search">Free Music Archiv免费音乐</a></td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="tab11" class="tab-pane fade">
+          <h3>书源</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                <td><a target="_blank" href="http://www.ituring.com.cn/">首页-图灵社区</a></td>
+        <td><a target="_blank" href="http://www.ncpssd.org/">国家哲学社会科学文献中心</a></td>
+        <td><a target="_blank" href="https://www.jiumodiary.com/">鸠摩搜书 - 电子书搜索引擎</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="https://www.shudan.vip/">书单网 </a></td>
+        <td><a target="_blank" href="http://cn.epubee.com/">在线电子书转换, 免费电子书转换器</a></td>
+        <td><a target="_blank" href="https://b-ok.org/">Electronic library. 英文图书</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="http://gen.lib.rus.ec/">gen.lib.rus.ec创世纪图书</a></td>
+        <td><a target="_blank" href="https://www.boyunso.com/">拨云搜索 - 专注于小说搜索引擎</a></td>
+        <td><a target="_blank" href="http://www.tanjaoui.ma/quran/mobile/translate.php?l=9">古兰经</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="https://digilibraries.com/">Free eBooks library</a></td>
+        <td><a target="_blank" href="https://b-ok.as/">ZLibary图书馆</a></td>
+        <td><a target="_blank" href="https://ebook.huzerui.com/#/">熊猫搜书</a></td>
+              </tr>
+               <tr>
+                <td><a target="_blank" href="http://www.pdfzj.cn/">高清PDF电子书</a></td>
+        <td><a target="_blank" href="https://help.flomoapp.com/community/user-story/mark-faq.html">在flomo创建个人的问题库</a>
+            </td>
+        <td><a target="_blank" href="https://ctext.org/zhs">中国哲学书电子化计划</a></td>
+              </tr>
+               <tr>
+                 <td><a target="_blank" href="http://drops.wooyun.org/">WooYun知识库 | 最严肃的安全原创平台</a></td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="tab12" class="tab-pane fade">
+          <h3>卡片笔记</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                <td><a target="_blank" href="https://niklas-luhmann-archiv.de/bestand/zettelkasten/zettel/ZK_1_NB_1_1_V">Niklas
+                Luhmann-Archiv 卢曼卡片笔记</a></td>
+        <td><a target="_blank" href="#">链接 8</a></td>
+        <td><a target="_blank" href="#">链接 9</a></td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="tab13" class="tab-pane fade">
+          <h3>学术</h3>
+          <table class="table table-striped">
+            
+            <tbody>
+              <tr>
+                <td><a target="_blank" href="http://sci-hub.bz/">Sci-Hub: removing barriers in the way of science</a></td>
+        <td><a target="_blank" href="http://www.lishichunqiu.com/">历史春秋网 - 专注于中国古代历史</a></td>
+        
+        <td><a target="_blank" href="#">链接 3</a></td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+               <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+</div>
+
+	<!-- 引入 Bootstrap JavaScript -->
+	<script src="./bootstrap.bundle.min.js"></script>
+</body>
+</html>
