@@ -47,6 +47,7 @@
 ```
     将 `${UUID}` 改为自己的UUID
     
-3. 执行  `docker run -d -p 80:80 -p 443:443 -e your.domain.com=xxx.com -e UUID=xxxxxxxxxxxxxxxxxxxx`运行容器。
+3. 执行  `docker run -d -p 80:80 -p 443:443 -e your.domain.com=xxx.com -e UUID=xxxxxxxxxxxxxxxxxxxx docker_v2ray:1.2.4
+`运行容器。
 
 
