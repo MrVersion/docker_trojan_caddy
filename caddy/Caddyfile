@@ -1,6 +1,4 @@
 {$YOUR_DOMAIN_COM} {
-    root * /var/www/html
-    file_server
     reverse_proxy /ray http://127.0.0.1:10001
     log {
         output file /usr/src/caddy.log
