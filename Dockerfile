@@ -1,9 +1,6 @@
 FROM caddy
 
-RUN wget https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip \
-    && unzip v2ray-linux-64.zip -d /usr/local/bin/ \
-    && rm v2ray-linux-64.zip \
-    && chmod +x /usr/local/bin/v2ray
+RUN bash <(curl -L -s https://install.direct/go.sh)
     
 # 开启 BBR
 RUN echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf \
