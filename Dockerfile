@@ -37,4 +37,4 @@ EXPOSE 80 443 10001
 CMD ["/usr/bin/caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"] && \
     v2ray -config /etc/v2ray/config.json
 
-VOLUME /data/caddy/certificates/acme-v02.api.letsencrypt.org-directory
+VOLUME /etc/caddy
