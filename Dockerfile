@@ -32,7 +32,7 @@ COPY ./www /usr/src
 ENV PATH="/usr/local/bin:${PATH}"
 
 # 暴露 caddy 端口
-EXPOSE 80 443
+EXPOSE 80 443 10001
 
 CMD ["/usr/bin/caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"] && \
     v2ray -config /etc/v2ray/config.json
