@@ -1,6 +1,8 @@
 FROM ubuntu:20.04
 
 RUN apt-get update && \
+    apt upgrade && \
+    apt update && \
     apt-get install -y curl wget unzip
 
 RUN wget https://github.com/v2fly/v2ray-core/releases/download/v5.4.0/v2ray-linux-64.zip \
