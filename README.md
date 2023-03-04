@@ -28,6 +28,6 @@
 
    在`config:json:12-13`位置将`your_domain_name` 替换成你自己的域名, 这个路径是 Caddy 自动调用 Let's encrypt 生成的证书路径。
 
-3. 执行  `docker-compose up`，或者执行`docker-compose up -d`以常驻进程模式运行容器。
+3. 执行  `docker run -d -p 80:80 -p 443:443`运行容器。
 
-如果每个容器都构建完成并没有产生异常退出，那么你的 Trojan + caddy 服务应该已经是正常运转状态了。如果 Trojan 暂时没有启动起来，可能是因为正在进行证书的申请，请多等待一段时间， Trojan 容器会尝试重启。
+
