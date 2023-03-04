@@ -1,14 +1,18 @@
 www.yourdomain.com:80 {
-    root * /usr/src/trojan
+    handle_path /index/* {
+        root * /var/www/prefix1
+        file_server
+    }
     log {
         output file /usr/src/caddy.log
     }
-    file_server
 }
 www.yourdomain.com:443 {
-    root * /usr/src/trojan
+    handle_path /index/* {
+        root * /var/www/prefix1
+        file_server
+    }
     log {
         output file /usr/src/caddy.log
     }
-    file_server
 }
