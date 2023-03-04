@@ -5,7 +5,7 @@
 1. 编辑 `./caddy/Caddyfile`:
 
     ```
-    ${your.domain.com} {
+    ${YOUR_DOMAIN_COM} {
         root * /var/www/html
         file_server
         reverse_proxy /ray http://127.0.0.1:10001 {
@@ -18,7 +18,7 @@
     }
     ```
 
-   将`${your.domain.com}`替换成你自己的域名。
+   将`${YOUR_DOMAIN_COM}`替换成你自己的域名。
 
 2.编辑 `./v2ray/config.json`
 ```
@@ -30,7 +30,7 @@
       "settings": {
         "clients": [
           {
-            "id": "${UUID}",  // 用户 ID，客户端与服务器必须相同
+            "id": "${V2RAY_UUID}",  // 用户 ID，客户端与服务器必须相同
             "alterId": 64
           }
         ]
@@ -45,9 +45,9 @@
   ]
 }
 ```
-    将 `${UUID}` 改为自己的UUID
+    将 `${V2RAY_UUID}` 改为自己的UUID
     
-3. 执行  `docker run -d -p 80:80 -p 443:443 -e your.domain.com=xxx.com -e UUID=xxxxxxxxxxxxxxxxxxxx docker_v2ray:1.2.4
+3. 执行  `docker run -d -p 80:80 -p 443:443 -e YOUR_DOMAIN_COM=xxx.com -e V2RAY_UUID=xxxxxxxxxxxxxxxxxxxx docker_v2ray:1.2.4
 `运行容器。
 
 
