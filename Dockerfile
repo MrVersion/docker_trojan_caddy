@@ -1,5 +1,8 @@
 FROM ubuntu:20.04
 
+ENV YOUR_DOMAIN_COM="www.example.com"
+ENV V2RAY_UUID="7E5E37F6-8E7F-D6C5-7DDE-E90C587CD185"
+
 RUN apt-get update && \
     apt upgrade && \
     apt-get install -y curl wget unzip
@@ -33,3 +36,5 @@ EXPOSE 80 443
 
 CMD ["/usr/bin/caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"] && \
     v2ray -config /etc/v2ray/config.json
+
+VOLUME /data/caddy/certificates/acme-v02.api.letsencrypt.org-directory
