@@ -1,4 +1,4 @@
-${your.domain.com} {
+${your_domain_com} {
     root * /var/www/html
     file_server
     reverse_proxy /ray http://127.0.0.1:10001
