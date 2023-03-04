@@ -35,6 +35,6 @@ ENV PATH="/usr/local/bin:${PATH}"
 EXPOSE 80 443 10001
 
 CMD ["/usr/bin/caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"] && \
-    v2ray -config /etc/v2ray/config.json
+    v2ray run -config /etc/v2ray/config.json
 
 VOLUME /etc/caddy
