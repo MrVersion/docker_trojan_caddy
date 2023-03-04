@@ -6,7 +6,7 @@
       "settings": {
         "clients": [
           {
-            "id": "7A9298FB-D542-47C4-92CD-F0F3B53AB4C0",  // 用户 ID，客户端与服务器必须相同
+            "id": "${UUID}",  // 用户 ID，客户端与服务器必须相同
             "alterId": 64
           }
         ]
