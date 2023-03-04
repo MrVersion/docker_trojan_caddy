@@ -34,7 +34,7 @@ ENV PATH="/usr/local/bin:${PATH}"
 # 暴露 caddy 端口
 EXPOSE 80 443 10001
 
-CMD ["/usr/bin/caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"] && \
-    v2ray run -config /etc/v2ray/config.json
+CMD ["/usr/bin/caddy", "start", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"] && \
+    nohup v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
 
 VOLUME /etc/caddy
