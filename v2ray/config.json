@@ -6,7 +6,7 @@
       "settings": {
         "clients": [
           {
-            "id": "${V2RAY_UUID}",  // 用户 ID，客户端与服务器必须相同
+            "id": "$V2RAY_UUID",  // 用户 ID，客户端与服务器必须相同
             "alterId": 64
           }
         ]
