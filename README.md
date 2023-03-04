@@ -47,7 +47,7 @@
 ```
     将 `${V2RAY_UUID}` 改为自己的UUID
     
-3. 执行  `docker run -d -p 80:80 -p 443:443 -e YOUR_DOMAIN_COM=xxx.com -e V2RAY_UUID=xxxxxxxxxxxxxxxxxxxx docker_v2ray:1.2.4
+3. 执行  `docker run -d -v ./ssl:/data/caddy/certificates/acme-v02.api.letsencrypt.org-directory -p 80:80 -p 443:443 -e YOUR_DOMAIN_COM=xxx.com -e V2RAY_UUID=xxxxxxxxxxxxxxxxxxxx docker_v2ray:1.2.4
 `运行容器。
 
 
