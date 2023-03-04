@@ -11,6 +11,11 @@ RUN echo "deb [trusted=yes] https://apt.fury.io/v2ray/ /" > /etc/apt/sources.lis
 # 安装 V2Ray 和 Caddy
 RUN apt-get update && \
     apt-get install -y v2ray caddy
+    
+# 开启 BBR
+RUN echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf \
+    && echo 'net.ipv4.tcp_congestion_control=bbr' >> /etc/sysctl.conf \
+    && sysctl -p
 
 # 复制 V2Ray 和 Caddy 的配置文件
 COPY v2ray.json /etc/v2ray/config.json
