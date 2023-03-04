@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 RUN apt-get update && \
     apt-get install -y curl wget unzip
 
-RUN wget https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip \
+RUN wget https://github.com/v2fly/v2ray-core/releases/download/v5.4.0/v2ray-linux-64.zip \
     && unzip v2ray-linux-64.zip -d /usr/local/bin \
     && chmod +x /usr/local/bin/v2ray \
     && mkdir /etc/v2ray
