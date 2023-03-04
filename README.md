@@ -6,8 +6,6 @@
 
     ```
     ${YOUR_DOMAIN_COM} {
-        root * /var/www/html
-        file_server
         reverse_proxy /ray http://127.0.0.1:10001 {
             websocket
             header_upstream -Origin
@@ -18,8 +16,8 @@
     }
     ```
 
-   将`${YOUR_DOMAIN_COM}`替换成你自己的域名。
-
+   将`${YOUR_DOMAIN_COM}`替换成你自己的域名。`/ray`是伪装路径
+  
 2.编辑 `./v2ray/config.json`
 ```
 {
