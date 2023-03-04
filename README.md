@@ -28,6 +28,6 @@
 
    在`config:json:12-13`位置将`your_domain_name` 替换成你自己的域名, 这个路径是 Caddy 自动调用 Let's encrypt 生成的证书路径。
 
-3. 执行  `docker run -d -p 80:80 -p 443:443`运行容器。
+3. 执行  `docker run -d -p 80:80 -p 443:443 -e your.domain.com=xxx.com -e UUID=xxxxxxxxxxxxxxxxxxxx`运行容器。
 
 
