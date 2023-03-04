@@ -1,18 +1,12 @@
-www.yourdomain.com:80 {
-    handle_path /index/* {
-        root * /var/www/prefix1
-        file_server
+your.domain.com {
+    root * /var/www/html
+    file_server
+    reverse_proxy /ray http://127.0.0.1:10000 {
+        websocket
+        header_upstream -Origin
     }
     log {
         output file /usr/src/caddy.log
     }
 }
-www.yourdomain.com:443 {
-    handle_path /index/* {
-        root * /var/www/prefix1
-        file_server
-    }
-    log {
-        output file /usr/src/caddy.log
-    }
-}
+
