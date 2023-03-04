@@ -13,10 +13,16 @@ RUN apt-get update && \
 RUN echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf \
     && echo 'net.ipv4.tcp_congestion_control=bbr' >> /etc/sysctl.conf \
     && sysctl -p
-    
-COPY Caddyfile /etc/caddy/Caddyfile
+
+# 复制Trojan和Caddy的配置文件
+COPY ./trojan/config/config.json /etc/trojan/config.json
+COPY ./caddy/Caddyfile /etc/caddy/Caddyfile
+
+# 将Trojan和Caddy添加到PATH
+ENV PATH="/usr/local/bin:${PATH}"
 
 # 暴露 caddy 端口
 EXPOSE 80 443
 
-CMD ["/usr/bin/caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
+CMD ["/usr/bin/caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"] && \
+    trojan -c /etc/trojan/config.json
