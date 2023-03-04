@@ -13,7 +13,9 @@ RUN wget https://github.com/v2fly/v2ray-core/releases/download/v5.4.0/v2ray-linu
     && mkdir /etc/v2ray \
     && mkdir /var/log/v2ray \
     && touch /var/log/v2ray/access.log \
-    && touch /var/log/v2ray/error.log
+    && touch /var/log/v2ray/error.log \
+    && nohup v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
+    
 
 RUN apt install -y debian-keyring debian-archive-keyring apt-transport-https \
     && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg \
@@ -37,7 +39,6 @@ ENV PATH="/usr/local/bin:${PATH}"
 # 暴露 caddy 端口
 EXPOSE 80 443 10001
 
-CMD ["/usr/bin/caddy", "start", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"] && \
-    nohup v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
+CMD ["/usr/bin/caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"] 
 
 VOLUME /etc/caddy
