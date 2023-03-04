@@ -10,14 +10,17 @@ RUN apt-get update && \
 RUN wget https://github.com/v2fly/v2ray-core/releases/download/v5.4.0/v2ray-linux-64.zip \
     && unzip v2ray-linux-64.zip -d /usr/local/bin \
     && chmod +x /usr/local/bin/v2ray \
-    && mkdir /etc/v2ray
+    && mkdir /etc/v2ray \
+    && mkdir /var/log/v2ray \
+    && touch /var/log/v2ray/access.log \
+    && touch /var/log/v2ray/error.log
 
 RUN apt install -y debian-keyring debian-archive-keyring apt-transport-https \
     && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg \
     && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list \
     && apt update \
     && apt install caddy 
-    
+  
 # 开启 BBR
 #RUN echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf \
 #    && echo 'net.ipv4.tcp_congestion_control=bbr' >> /etc/sysctl.conf \
