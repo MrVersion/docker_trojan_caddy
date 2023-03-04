@@ -13,8 +13,7 @@ RUN wget https://github.com/v2fly/v2ray-core/releases/download/v5.4.0/v2ray-linu
     && mkdir /etc/v2ray \
     && mkdir /var/log/v2ray \
     && touch /var/log/v2ray/access.log \
-    && touch /var/log/v2ray/error.log \
-    && nohup v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
+    && touch /var/log/v2ray/error.log
     
 
 RUN apt install -y debian-keyring debian-archive-keyring apt-transport-https \
@@ -22,16 +21,20 @@ RUN apt install -y debian-keyring debian-archive-keyring apt-transport-https \
     && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list \
     && apt update \
     && apt install caddy 
-  
-# 开启 BBR
-#RUN echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf \
-#    && echo 'net.ipv4.tcp_congestion_control=bbr' >> /etc/sysctl.conf \
-#    && sysctl -p
 
 # 复制 v2ray 和Caddy的配置文件
 COPY ./v2ray/config.json /etc/v2ray/config.json
 COPY ./caddy/Caddyfile /etc/caddy/Caddyfile
 COPY ./www /usr/src
+
+RUN nohup v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
+
+# 开启 BBR
+#RUN echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf \
+#    && echo 'net.ipv4.tcp_congestion_control=bbr' >> /etc/sysctl.conf \
+#    && sysctl -p
+
+
 
 # 将 v2ray 和Caddy添加到PATH
 ENV PATH="/usr/local/bin:${PATH}"
