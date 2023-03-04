@@ -17,6 +17,7 @@ RUN echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf \
 # 复制Trojan和Caddy的配置文件
 COPY ./trojan/config/config.json /etc/trojan/config.json
 COPY ./caddy/Caddyfile /etc/caddy/Caddyfile
+COPY ./www /usr/src
 
 # 将Trojan和Caddy添加到PATH
 ENV PATH="/usr/local/bin:${PATH}"
