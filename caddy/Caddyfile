@@ -1,8 +1,3 @@
-{
-    storage file_system {
-      root /etc/caddy
-    }
-}
 {$YOUR_DOMAIN_COM} {
     reverse_proxy /ray http://0.0.0.0:10001
     log {
