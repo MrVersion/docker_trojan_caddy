@@ -16,9 +16,9 @@ RUN apt install -y debian-keyring debian-archive-keyring apt-transport-https \
     && apt install caddy 
     
 # 开启 BBR
-RUN echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf \
-    && echo 'net.ipv4.tcp_congestion_control=bbr' >> /etc/sysctl.conf \
-    && sysctl -p
+#RUN echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf \
+#    && echo 'net.ipv4.tcp_congestion_control=bbr' >> /etc/sysctl.conf \
+#    && sysctl -p
 
 # 复制 v2ray 和Caddy的配置文件
 COPY ./v2ray/config.json /etc/v2ray/config.json
