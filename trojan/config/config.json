@@ -9,8 +9,8 @@
     ],
     "log_level": 1,
     "ssl": {
-        "cert": "/ssl/your_domain_name/your_domain_name.crt",
-        "key": "/ssl/your_domain_name/your_domain_name.key",
+        "cert": "/data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/your_domain_name/certificate.crt",
+        "key": "/data/caddy/certificates/acme-v02.api.letsencrypt.org-directory/your_domain_name/private.key",
         "key_password": "",
         "cipher_tls13":"TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384",
         "prefer_server_cipher": true,
