@@ -21,7 +21,8 @@ RUN apt install -y debian-keyring debian-archive-keyring apt-transport-https \
     && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg \
     && curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list \
     && apt update \
-    && apt install caddy 
+    && apt install caddy \
+    && mkdir -p /etc/caddy/sites
 
 # 复制 v2ray 和Caddy的配置文件
 COPY ./v2ray/config.json /etc/v2ray/config.json
