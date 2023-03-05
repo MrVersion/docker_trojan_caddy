@@ -28,8 +28,8 @@ COPY ./v2ray/config.json /etc/v2ray/config.json
 COPY ./caddy/Caddyfile /etc/caddy/Caddyfile
 COPY ./www /usr/src
 
-RUN sed -i s/'${V2RAY_UUID}'/$V2RAY_UUID/g /etc/v2ray/config.json \
-    && sed -i s/'${VMESS_WSPATH}'/$VMESS_WSPATH/g /etc/v2ray/config.json
+RUN sed -e "s/\${V2RAY_UUID}/$V2RAY_UUID/g" /etc/v2ray/config.json \ 
+    && sed -e "s#\${VMESS_WSPATH}#$VMESS_WSPATH#g" /etc/v2ray/config.json
 
 RUN nohup v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
 
