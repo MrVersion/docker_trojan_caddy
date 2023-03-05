@@ -11,14 +11,17 @@
 			"settings": {
 				"clients": [
 					{
-						"id": "$V2RAY_UUID",
+						"id": "V2RAY_UUID",
 						"level": 1,
 						"alterId": 0
 					}
 				]
 			},
 			"streamSettings": {
-				"network": "ws"
+				"network": "ws",
+				"wsSettings": {
+					"path": "VMESS_WSPATH"
+				}
 			},
 			"sniffing": {
 				"enabled": true,
