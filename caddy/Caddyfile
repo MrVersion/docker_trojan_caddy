@@ -4,9 +4,7 @@
     }
 }
 {$YOUR_DOMAIN_COM} {
-    reverse_proxy {$VMESS_WSPATH} localhost:10001
-    log {
-        output file /usr/src/caddy.log
-    }
+    reverse_proxy {$VMESS_WSPATH} 127.0.0.1:10001
 }
+import sites/*
 
