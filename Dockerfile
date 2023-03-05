@@ -27,7 +27,7 @@ RUN apt install -y debian-keyring debian-archive-keyring apt-transport-https \
 # 复制 v2ray 和Caddy的配置文件
 COPY ./v2ray/config.json /etc/v2ray/config.json
 COPY ./caddy/Caddyfile /etc/caddy/Caddyfile
-COPY ./www  /etc/caddy/sites
+
 
 RUN sed -i "s/\${V2RAY_UUID}/$V2RAY_UUID/g" /etc/v2ray/config.json && sed -i "s#\${VMESS_WSPATH}#$VMESS_WSPATH#g" /etc/v2ray/config.json
 
