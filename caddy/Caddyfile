@@ -3,7 +3,11 @@
        root /etc/caddy
     }
 }
-{$YOUR_DOMAIN_COM} {
+{$YOUR_DOMAIN_COM}:8080 {
+    reverse_proxy {$VMESS_WSPATH} 127.0.0.1:10001
+}
+
+{$YOUR_DOMAIN_COM}:8443 {
     reverse_proxy {$VMESS_WSPATH} 127.0.0.1:10001
 }
 import sites/*
