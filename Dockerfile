@@ -34,7 +34,7 @@ ENV PATH="/usr/local/bin:${PATH}"
 
 RUN sed -i "s/\${V2RAY_UUID}/$V2RAY_UUID/g" /etc/v2ray/config.json && sed -i "s#\${VMESS_WSPATH}#$VMESS_WSPATH#g" /etc/v2ray/config.json
 
-RUN nohup /usr/local/bin/v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
+
 
 # 开启 BBR
 #RUN echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf \
@@ -43,7 +43,11 @@ RUN nohup /usr/local/bin/v2ray run -config /etc/v2ray/config.json > /dev/null 2>
 
 
 # 暴露 caddy 端口
-EXPOSE 80 443 10001
+EXPOSE 80 443
+
+# RUN nohup /usr/local/bin/v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
+
+ENTRYPOINT ["nohup","/usr/local/bin/v2ray","run","-config /etc/v2ray/config.json > /dev/null 2>&1 &"]
 
 CMD ["/usr/bin/caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"] 
 
