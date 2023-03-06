@@ -3,7 +3,7 @@
 ### 使用步骤
 环境要求：ubuntu 18.04+
 1. 下载代码库 `git clone https://github.com/MrVersion/docker_v2ray_caddy.git`
-2. 进入目录 `cd docker_v2ray_caddy/`
+2. 进入目录 `cd docker_v2ray_caddy/` 修改 Dockerfile 中的 V2RAY_UUID 为其它值
 3. 构建容器如 `docker build -t docker_v2ray:1.1.1 .`
 4. 启动容器 
 ```
