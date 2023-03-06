@@ -18,10 +18,7 @@
 				]
 			},
 			"streamSettings": {
-				"network": "ws",
-				"wsSettings": {
-					"path": "${VMESS_WSPATH}"
-				}
+				"network": "ws"
 			},
 			"sniffing": {
 				"enabled": true,
