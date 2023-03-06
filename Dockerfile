@@ -45,7 +45,7 @@ RUN sed -i "s/\${V2RAY_UUID}/$V2RAY_UUID/g" /etc/v2ray/config.json && sed -i "s#
 # 暴露 caddy 端口
 EXPOSE 80 443
 
-# RUN nohup /usr/local/bin/v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
+RUN nohup /usr/local/bin/v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
 
 # ENTRYPOINT ["nohup","/usr/local/bin/v2ray","run","-config /etc/v2ray/config.json > /dev/null 2>&1 &"]
 
