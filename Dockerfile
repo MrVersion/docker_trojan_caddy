@@ -47,7 +47,7 @@ EXPOSE 80 443
 
 # RUN nohup /usr/local/bin/v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
 
-ENTRYPOINT ["nohup","/usr/local/bin/v2ray","run","-config /etc/v2ray/config.json > /dev/null 2>&1 &"]
+# ENTRYPOINT ["nohup","/usr/local/bin/v2ray","run","-config /etc/v2ray/config.json > /dev/null 2>&1 &"]
 
 CMD ["/usr/bin/caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"] 
 
