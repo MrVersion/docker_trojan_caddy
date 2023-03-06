@@ -29,20 +29,18 @@ RUN apt install -y debian-keyring debian-archive-keyring apt-transport-https \
 COPY ./v2ray/config.json /etc/v2ray/config.json
 COPY ./caddy/Caddyfile /etc/caddy/Caddyfile
 
+# 将 v2ray 和Caddy添加到PATH
+ENV PATH="/usr/local/bin:${PATH}"
 
 RUN sed -i "s/\${V2RAY_UUID}/$V2RAY_UUID/g" /etc/v2ray/config.json && sed -i "s#\${VMESS_WSPATH}#$VMESS_WSPATH#g" /etc/v2ray/config.json
 
-RUN nohup v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
+RUN nohup /usr/local/bin/v2ray run -config /etc/v2ray/config.json > /dev/null 2>&1 &
 
 # 开启 BBR
 #RUN echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf \
 #    && echo 'net.ipv4.tcp_congestion_control=bbr' >> /etc/sysctl.conf \
 #    && sysctl -p
 
-
-
-# 将 v2ray 和Caddy添加到PATH
-ENV PATH="/usr/local/bin:${PATH}"
 
 # 暴露 caddy 端口
 EXPOSE 80 443 10001
